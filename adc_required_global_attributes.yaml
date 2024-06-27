@@ -176,5 +176,29 @@ ACDD_global_attributes:
     help: "Required"
     format: "text"
     requirement_level: "Required"
-
-  # Add 'Global attributes not being part of ACDD, but that are parsed.' section of https://adc.met.no/node/4 ?
+  # Added 'Global attributes not being part of ACDD, but that are parsed.' section of https://adc.met.no/node/4
+  iso_topic_category:
+    description: "ISO topic category fetched from a controlled vocabulary. Accepted elements are listed in the MMD specification."
+    help: "Not part of ACDD, MET extension. Recommended for filtering purposes."
+    format: "text"
+    requirement_level: "Recommended"
+  activity_type:
+    description: "Activity types are used to identify the origin of the dataset. This is not an identification of the observation platform (e.g. specific vessel, SYNOP station or satellite), but more the nature of the generation process (e.g. simulation, in situ observation, remote sensing etc). It is useful in the context of filtering data when searching for relevant datasets. Only elements from the controlled vocabulary of the MMD specification are allowed."
+    help: "Not part of ACDD, MET extension. Recommended for filtering purposes."
+    format: "text"
+    requirement_level: "Recommended"
+  operational_status:
+    description: "The current operational status of the product. Only elements from the controlled vocabulary of the MMD specification are allowed."
+    help: "Not part of ACDD, MET extension. Recommended for filtering purposes."
+    format: "text"
+    requirement_level: "Recommended"
+  featureType:
+    description: "This is part of the CF conventions and is required when submitting data according to the discrete sampling geometries section of the CF conventions."
+    help: "The keywords used has to be exactly written as in the CF conventions. Valid keywords are listed in http://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#_features_and_feature_types"
+    format: "text"
+    requirement_level: "Recommended"
+  wigos_id:
+    description: "WMO WIGOS identifier if available to describe the platform generating data."
+    help: ""
+    format: "text"
+    requirement_level: "Recommended"
